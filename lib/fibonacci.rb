@@ -4,3 +4,14 @@
 #Add the last two numbers of this array and append it to itself
 #Loop this n - 2 times to get an array of length n.
 #Return the array
+
+def fibonacci(num)
+    fibonacci_sequence = [0, 1]
+    (num - 2).times do |number|
+        fibonacci_sequence.push(fibonacci_sequence[-1] + fibonacci_sequence[-2])
+    end
+    fibonacci_sequence
+end
+
+puts fibonacci(8)
+
